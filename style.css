@@ -1,0 +1,156 @@
+body {
+    background-color: #600080;
+    font-size: 3vw;
+    color: #fff;
+    text-shadow: -0.15vw 0 black, 0 0.15vw black, 0.15vw 0 black, 0 -0.15vw black;
+}
+
+.row {
+    display: flex;
+    padding: 5px;
+    height: 30vh;
+    margin: 5px;
+    flex-wrap: wrap;
+    background-color: #4d0066;
+}
+
+.flex-12 {
+    display: flex;
+    flex: 1 1 100%;
+    margin: 5px;
+    background-color: #3d0099;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.flex-6 {
+    display: flex;
+    flex: 1;
+    margin: 5px;
+    background-color: #3d0099;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.menu-bar {
+    display: flex;
+    flex: 0.5;
+    height: 10vh;
+    margin: 5px;
+    position: absolute;
+}
+
+ul {
+    display: flex;
+    flex: 1;
+    margin: 2px;
+    list-style-type: none;
+}
+
+li {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 2vw;
+    padding: 1vw;
+    font-size: 4vw;
+    border: 3px solid #3d0099;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #400080, #4d0099, #5900b3, #6600cc, #5900b3, #4d0099, #400080);
+    text-shadow: -0.15vw 0 black, 0 0.15vw black, 0.15vw 0 black, 0 -0.15vw black;
+}
+
+li:hover {
+    animation: pulse 700ms infinite;
+}
+
+@keyframes pulse {
+    0% {
+        border: 3px solid #4d0099
+    }
+
+    10% {
+        border: 3px solid #5900b3
+    }
+
+    30% {
+        border: 3px solid #6600cc
+    }
+
+    40% {
+        border: 3px solid #7300e6
+    }
+
+    50% {
+        border: 3px solid #8000ff
+    }
+
+    60% {
+        border: 3px solid #8c1aff
+    }
+
+    70% {
+        border: 3px solid #8000ff
+    }
+
+    80% {
+        border: 3px solid #7300e6
+    }
+
+    90% {
+        border: 3px solid #6600cc
+    }
+
+    100% {
+        border: 3px solid #5900b3
+    }
+}
+
+a {
+    color: #f2f2f2;
+    text-shadow: -0.15vw 0 black, 0 0.15vw black, 0.15vw 0 black, 0 -0.15vw black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .flex-6 {
+        flex: 1 1 100%;
+    }
+}
+
+
+/*//////////////*/
+
+.burger {
+    display: none;
+    background-color: transparent;
+    font-size: 5vw;
+    border: 0;
+    position: absolute;
+    margin-left: 40vw;
+}
+
+.burger:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 640px) {
+    .menu-bar {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    ul {
+        display: block;
+        flex-direction: column;
+    }
+
+    .burger:focus+.menu-bar {
+        display: block;
+    }
+}
